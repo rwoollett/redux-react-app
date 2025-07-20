@@ -1,0 +1,22 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+@import '~bulma/bulma';
+
+.sortableHeader {
+  cursor: pointer;
+
+  &:hover {
+    background-color: $navy;
+  }
+
+  .control {
+    display: flex;
+    align-items: center;
+    height: 24px;
+
+    .arrowContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

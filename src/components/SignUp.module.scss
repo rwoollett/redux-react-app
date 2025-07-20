@@ -1,0 +1,28 @@
+form {
+  flex-grow: 1;
+  flex: 0 0 40%;
+
+  & .group {
+    margin-bottom: 10px;
+
+    & label {
+      width: 100%;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    & input,
+    select,
+    textarea {
+      width: 100%;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    & textarea {
+      padding: 10px;
+      border: 2px solid;
+      overflow: auto;
+      resize: vertical;
+    }
+
+  }
+}
