@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../resources/routes-constants'
-import logo from '../styles/coastal-32x32.png'
+import logo from '../styles/favicon-32x32.png'
 import style from './NavBar.module.scss';
 import { TABLE_VIEW } from './Table';
 import useSignedInAuthorize from '../hooks/use-signedin-authenticate';
