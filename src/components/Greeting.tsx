@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useGeolocationQuery } from "../store/api/ipApi";
+import { selectGeoLocation, useGeolocationQuery } from "../store/api/ipApi";
 import style from './Greeting.module.scss';
 import classnames from 'classnames';
 import Skeleton from "./Skeleton";
 import { helloApi } from "../utility/functions";
+import { useAppSelector } from "../store/reducers/store";
 
 interface GreetingProps {
   name: string;
@@ -12,8 +13,8 @@ interface GreetingProps {
 
 const Greeting = ({ name, lang }: GreetingProps) => {
   const { data, error, isFetching, isLoading } = useGeolocationQuery();
-  //const geoLocation = useAppSelector(state => selectGeoLocation(state));
-  //console.log(geoLocation);
+  const geoLocation = useAppSelector(state => selectGeoLocation(state));
+  console.log(geoLocation);
 
   const renderHTML = (rawHTML: string) => React.createElement("span", { dangerouslySetInnerHTML: { __html: rawHTML } });
   const [helloText, setHelloText] = useState("");
