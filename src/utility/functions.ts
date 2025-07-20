@@ -28,9 +28,9 @@ export const helloApi = async (term: string): Promise<HelloLanguage> => {
 
 export function baseAuthUrl() {
   if (process.env.NODE_ENV === 'development') {
-    return "";
+    return `${process.env.REACT_APP_AUTH_URL}`;
   } else {
-    return "";
+    return `${process.env.REACT_APP_AUTH_URL}`;
   }
 }
 
