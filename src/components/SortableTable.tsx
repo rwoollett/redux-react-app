@@ -1,6 +1,6 @@
 import React from 'react';
 import Table, { ConfigTable } from "./Table";
-import { GoArrowSmallUp, GoArrowSmallDown } from "react-icons/go";
+import { GoArrowUp, GoArrowDown } from "react-icons/go";
 import useSort from "../hooks/use-sort";
 import style from './SortableTable.module.scss';
 
@@ -42,7 +42,7 @@ function getIcon(label: string, sortBy: string | null, sortOrder: string | null)
   if (label !== sortBy) {
     return (
       <div className={style.arrowContainer}>
-        <GoArrowSmallUp /> <GoArrowSmallDown />
+        <GoArrowUp /> <GoArrowDown />
       </div>
     );
   }
@@ -50,19 +50,19 @@ function getIcon(label: string, sortBy: string | null, sortOrder: string | null)
   if (sortOrder === null) {
     return (
       <div className={style.arrowContainer}>
-        <GoArrowSmallUp /> <GoArrowSmallDown />
+        <GoArrowUp /> <GoArrowDown />
       </div>
     );
   } else if (sortOrder === 'asc') {
     return (
       <div className={style.arrowContainer}>
-        <GoArrowSmallUp />
+        <GoArrowUp />
       </div>
     );
   } else if (sortOrder === 'desc') {
     return (
       <div className={style.arrowContainer}>
-        <GoArrowSmallDown />
+        <GoArrowDown />
       </div>
     );
   }
